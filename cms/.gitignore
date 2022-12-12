@@ -1,0 +1,29 @@
+### WordPress ###
+# Ignore everything in the root except the "wp-content" & "assets" directory.
+/*
+!.gitignore
+!/*.sql
+wp-config.php
+!favicon.ico
+!/wp-content/
+/wp-content/index.php
+
+/.htaccess
+/license.txt
+/readme.html
+/sitemap.xml
+/sitemap.xml.gz
+!/*.command
+
+#------------------------
+#  Main ignored items
+#------------------------
+
+/wp-content/*
+
+!/docker-compose.yml
+/wp-content/uploads/
+/wp-content/plugins/
+!/wp-content/themes/
+/wp-content/themes/*
+!/wp-content/themes/animal-shelter-aruba-custom

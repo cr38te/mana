@@ -1,0 +1,177 @@
+[{
+    "type": "ok",
+    "data": {
+        "ID": 78,
+        "post_author": "2",
+        "post_date": "2022-06-01 19:30:18",
+        "post_date_gmt": "2022-06-01 19:30:18",
+        "post_content": "",
+        "post_title": "Contact Us",
+        "post_excerpt": "",
+        "post_status": "publish",
+        "comment_status": "closed",
+        "ping_status": "closed",
+        "post_password": "",
+        "post_name": "contact-us",
+        "to_ping": "",
+        "pinged": "",
+        "post_modified": "2022-06-23 15:13:15",
+        "post_modified_gmt": "2022-06-23 15:13:15",
+        "post_content_filtered": "",
+        "post_parent": 0,
+        "guid": "https://cms.papaya-apartments.com/?page_id=78",
+        "menu_order": 0,
+        "post_type": "page",
+        "post_mime_type": "",
+        "comment_count": "0",
+        "filter": "raw",
+        "acf": {
+            "seo": { "title": "", "description": "", "image": false },
+            "heroArea": {
+                "classes": "",
+                "slides": [{
+                    "title": "Home",
+                    "description": "",
+                    "addlink": false,
+                    "link": "",
+                    "linkText": "",
+                    "showWidget": false,
+                    "mediaType": "Image",
+                    "image": {
+                        "ID": 90,
+                        "id": 90,
+                        "title": "9j",
+                        "filename": "9j.jpg",
+                        "filesize": 1089611,
+                        "url": "https://cms.papaya-apartments.com/wp-content/uploads/2022/06/9j.jpg",
+                        "link": "https://staging.papaya-apartments.com/apartment/apartment-1/9j/",
+                        "alt": "",
+                        "author": "2",
+                        "description": "",
+                        "caption": "",
+                        "name": "9j",
+                        "status": "inherit",
+                        "uploaded_to": 114,
+                        "date": "2022-06-01 19:33:17",
+                        "modified": "2022-06-01 19:41:28",
+                        "menu_order": 0,
+                        "mime_type": "image/jpeg",
+                        "type": "image",
+                        "subtype": "jpeg",
+                        "icon": "https://cms.papaya-apartments.com/wp-includes/images/media/default.png",
+                        "width": 1920,
+                        "height": 1281,
+                        "sizes": {
+                            "thumbnail": "https://cms.papaya-apartments.com/wp-content/uploads/2022/06/9j-150x150.jpg",
+                            "thumbnail-width": 150,
+                            "thumbnail-height": 150,
+                            "medium": "https://cms.papaya-apartments.com/wp-content/uploads/2022/06/9j-300x200.jpg",
+                            "medium-width": 300,
+                            "medium-height": 200,
+                            "medium_large": "https://cms.papaya-apartments.com/wp-content/uploads/2022/06/9j-768x512.jpg",
+                            "medium_large-width": 768,
+                            "medium_large-height": 512,
+                            "large": "https://cms.papaya-apartments.com/wp-content/uploads/2022/06/9j-1024x683.jpg",
+                            "large-width": 1024,
+                            "large-height": 683,
+                            "1536x1536": "https://cms.papaya-apartments.com/wp-content/uploads/2022/06/9j-1536x1025.jpg",
+                            "1536x1536-width": 1536,
+                            "1536x1536-height": 1025,
+                            "2048x2048": "https://cms.papaya-apartments.com/wp-content/uploads/2022/06/9j.jpg",
+                            "2048x2048-width": 1920,
+                            "2048x2048-height": 1281,
+                            "fullscreen": "https://cms.papaya-apartments.com/wp-content/uploads/2022/06/9j-1920x1080.jpg",
+                            "fullscreen-width": 1920,
+                            "fullscreen-height": 1080,
+                            "fullscreen-portrait": "https://cms.papaya-apartments.com/wp-content/uploads/2022/06/9j-1080x1281.jpg",
+                            "fullscreen-portrait-width": 1080,
+                            "fullscreen-portrait-height": 1281
+                        }
+                    },
+                    "mobileImage": false,
+                    "video": false,
+                    "alternativeVideo": false,
+                    "mobileVideo": false,
+                    "alternativeMobileVideo": false
+                }]
+            },
+            "mainContentBlock": [{
+                    "acf_fc_layout": "propertyCard",
+                    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+                },
+
+                {
+                    "acf_fc_layout": "duoContentBlock",
+                    "title": "Featured List",
+                    "leftColumn": { "variant": "Text" },
+                    "rightColumn": { "variant": "Image" }
+                },
+                {
+                    "acf_fc_layout": "serviceBlock",
+                    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+                },
+                {
+                    "acf_fc_layout": "testimonialsBlock",
+                    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+                    "testimonials": [{
+                            "starRating": 0,
+                            "description": "eeeee",
+                            "name": "BOB"
+                        },
+                        {
+                            "starRating": 0.5,
+                            "description": "ELLOOO",
+                            "name": "George"
+                        },
+                        {
+                            "starRating": 1,
+                            "description": "That's Great",
+                            "name": "HOSEEEE"
+                        },
+                        {
+                            "starRating": 1.5,
+                            "description": "eeeee",
+                            "name": "BOB"
+                        },
+                        {
+                            "starRating": 2,
+                            "description": "ELLOOO",
+                            "name": "George"
+                        },
+                        {
+                            "starRating": 2.5,
+                            "description": "That's Great",
+                            "name": "HOSEEEE"
+                        },
+                        {
+                            "starRating": 3,
+                            "description": "eeeee",
+                            "name": "BOB"
+                        },
+                        {
+                            "starRating": 3.5,
+                            "description": "ELLOOO",
+                            "name": "George"
+                        },
+                        {
+                            "starRating": 4,
+                            "description": "That's Great",
+                            "name": "HOSEEEE"
+                        },
+                        {
+                            "starRating": 4.5,
+                            "description": "That's Great",
+                            "name": "HOSEEEE"
+                        },
+                        {
+                            "starRating": 5,
+                            "description": "That's Great",
+                            "name": "HOSEEEE"
+                        }
+                    ]
+                }
+            ]
+        },
+        "template": ""
+    }
+}]
