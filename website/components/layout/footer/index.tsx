@@ -82,7 +82,6 @@ export default function Aside({ newsletter, ...props }: IFooter) {
 					socials={socials}
                 />
             </StyledAside>
-
             <StyledFooter
                 id="footer"
                 direction="column"
@@ -92,7 +91,7 @@ export default function Aside({ newsletter, ...props }: IFooter) {
                 bgColor="defaultPrimary"
             >
                 <Row alignItems="center" justifyContent="center">
-                    <StyledColumn width="25%" justifyContent="start">
+                    <StyledColumn width="50%" justifyContent="start">
                         <Paragraph color="primary">
                             <ExternalLink
                                 href="/api/sitemap.txt"
@@ -105,23 +104,10 @@ export default function Aside({ newsletter, ...props }: IFooter) {
                         </Paragraph>
                     </StyledColumn>
 
-                    <StyledColumn width="50%" justifyContent="center">
+                    <StyledColumn width="50%" justifyContent="end">
                         <Paragraph color="primary">
                             &copy;
                             {` Copyright ${new Date().getFullYear()} | National Archaeological Museum Aruba. All rights reserved.`}
-                        </Paragraph>
-                    </StyledColumn>
-                    <StyledColumn width="25%" justifyContent="end">
-                        <Paragraph color="primary">
-                            By:
-                            <ExternalLink
-                                href="https://www.cr38te.com"
-                                title="By: CR38TE"
-                                target="_blank"
-                                color="defaultSecondary"
-                            >
-                                CR38TE
-                            </ExternalLink>
                         </Paragraph>
                     </StyledColumn>
                 </Row>

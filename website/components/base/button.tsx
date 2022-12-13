@@ -5,8 +5,8 @@ type ButtonProps = {
         | keyof import('styled-components').DefaultTheme['colors']
         | undefined;
     color?: keyof DefaultTheme['colors'] | undefined;
-    bgHoverColor?: keyof DefaultTheme['colors'] | undefined;
-    hoverColor?: keyof DefaultTheme['colors'] | undefined;
+    bgColorHover?: keyof DefaultTheme['colors'] | undefined;
+    colorHover?: keyof DefaultTheme['colors'] | undefined;
 };
 
 export const Button = styled.a<ButtonProps>`
@@ -35,8 +35,8 @@ export const Button = styled.a<ButtonProps>`
     }
 
     &:hover {
-        color: ${(props) => props.theme.colors[props.hoverColor!]};
-        background-color: ${(props) => props.theme.colors[props.bgHoverColor!]};
+        color: ${(props) => props.theme.colors[props.colorHover!]};
+        background-color: ${(props) => props.theme.colors[props.bgColorHover!]};
     }
     @media (max-width: 390px) {
         min-width: 125px;

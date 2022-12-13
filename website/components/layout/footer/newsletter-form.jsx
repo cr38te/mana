@@ -184,7 +184,9 @@ export default function NewsletterForm({
 				<StyledButton
 					type={'submit'}
 					bgColor="defaultSecondary"
+                    bgColorHover="primary"
 					color="defaultPrimary"
+                    colorHover="secondary"
 					style={{
 						display: `${
 							newsletterState === 'done' ? 'none' : 'block'

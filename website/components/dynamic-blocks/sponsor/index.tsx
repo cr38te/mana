@@ -86,7 +86,9 @@ export default function SponsorSection(props: {
                     <Button
                         href={buttonLink ? buttonLink : '#'}
                         bgColor="defaultSecondary"
+                        bgColorHover="primary"
                         color="defaultPrimary"
+                        colorHover="secondary"
                         target="_blank"
                     >
                         {buttonText}

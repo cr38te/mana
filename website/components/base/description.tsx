@@ -16,7 +16,7 @@ const Text = styled.div<TextProps>`
     ${ParagraphCSS}
     color:${(p) => p.theme.colors[p.color]};
     font-size: 16px;
-    line-height: 28px;
+    line-height: 24px;
     margin-bottom: ${(p) => (p.mb ? p.mb : p.theme.spacing.tripleInset)};
     margin-top: ${(p) => (p.mt ? p.mt : p.theme.spacing.inset)};
 	width: ${(p) => p.width};

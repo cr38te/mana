@@ -6,7 +6,6 @@ import Title from '../../base/heading';
 import { Button } from '../../base/button';
 import { ISlide } from '../../../utils/interface';
 import { Description } from '../../base/description';
-import Logo from '../../../assets/logo-small.png';
 
 type ContainerProps = {
     bgImage: string;
@@ -19,6 +18,7 @@ const StyledContainer = styled(Container)<ContainerProps>`
     width: 100%;
     background-image: url(${(props) => [props.bgImage]});
     background-position: center;
+    background-attachment:fixed;
     position: relative;
     background-size:cover;
     @media ${device.laptopL} {
@@ -77,22 +77,7 @@ const StyledTitle = styled(Title)`
         text-align: center;
     }
 `;
-const LogoImg = styled.img`
-    width: 200px;
-    height: auto;
-    display: block;
-    cursor: pointer;
-    z-index: 10000;
-    transition: 0.5s all ease;
 
-    &.animateHeader {
-        width: 100px;
-    }
-
-    @media ${device.mobileL} {
-        z-index: 10000;
-    }
-`;
 
 export default function HeroImage({
     slides,
@@ -119,30 +104,9 @@ export default function HeroImage({
             bgImage={image?.url}
             justifyContent="center"
             alignItems="center"
-            direction="column"
+            direction="row"
         >
-            <StyledRow
-                justifyContent="center"
-                alignItems="start"
-                className="logo"
-            >
-                <StyledColumn
-                    justifyContent="center"
-                    alignItems="center"
-                    direction="column"
-                    width="70%"
-                >
-                    <StyledColumn
-                        width="100%"
-                        className="logo"
-                        justifyContent="start"
-                        alignItems="start"
-                    >
-                        <LogoImg src={Logo} alt="Animal Shelter Aruba" />
-                    </StyledColumn>
-                </StyledColumn>
-            </StyledRow>
-            <StyledRow justifyContent="center" alignItems="start">
+            <StyledRow justifyContent="center" alignItems="center">
                 <StyledColumn
                     width="35%"
                     justifyContent="center"

@@ -1,10 +1,9 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
 import { IHero, ISlide } from '../../../utils/interface';
-import { Column, Container, Row } from '../../base/grid';
 import HeroImage from './image';
 import { device } from '../../base/mediaquery';
-import HeroSmallCard from './card';
+import Brand from '../../../assets/logo-small.png';
 
 type ContainerProps = {
     fullScreen?: boolean;
@@ -17,25 +16,27 @@ const StyledContainer = styled.div<ContainerProps>`
     position: relative;
 `;
 
-const Slides = styled.div`
-    display: block;
-    width: 100%;
+const ContainerBrand = styled.div`
+    position:absolute;
+    top:15px;
+    left:50%;
+    margin-left:-100px;
+    z-index:20;
 `;
 
-const Slide2 = styled.div`
-    width: 30%;
-    position: absolute;
-    bottom: -50px;
-    left: 18%;
-    z-index: 1;
-    @media ${device.mobileL} {
-        width: 60%;
+const LogoImg = styled.img`
+    width: 200px;
+    height: auto;
+    display: block;
+    z-index: 10000;
+    transition: 0.5s all ease;
+
+    &.animateHeader {
+        width: 100px;
     }
-`;
-const Cards = styled.div`
-    width: 30%;
+
     @media ${device.mobileL} {
-        width: 60%;
+        z-index: 10000;
     }
 `;
 
@@ -47,6 +48,9 @@ export const HeroComponent = (heroArea: IHero) => {
         <section>
             <>
                 <StyledContainer fullScreen={fullScreen} direction="column">
+                    <ContainerBrand>
+                        <LogoImg src={Brand} alt="National Archaeological Museum Aruba" />
+                    </ContainerBrand>
                     <HeroImage {...props} fullScreen={fullScreen} />
                 </StyledContainer>
             </>

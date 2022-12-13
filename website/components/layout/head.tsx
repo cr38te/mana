@@ -13,7 +13,7 @@ export default function Head({
             <title>{title || postTitle}</title>
             <meta name="description" content={description} />
             <meta name="image" content={image?.url} />
-            <meta name="robots" content="noindex,nofollow" />
+            <meta name="robots" content="index,follow" />
             <meta name="author" content="CR38TE - DEFINE.DESIGN.DEVELOP"></meta>
             <meta property="og:url" content={permalink} />
             <meta property="og:type" content="website" />

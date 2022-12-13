@@ -187,7 +187,7 @@ function mapOptions(maps: any) {
 
 const Map = styled.div`
 	display: block;
-	height: 80vh;
+	height: 100vh;
 	width: 100%;
 	border-radius: 0;
 	.mapMarker {

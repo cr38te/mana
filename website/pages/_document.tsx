@@ -91,7 +91,7 @@ export default class AppDocument extends Document {
 						nonce={nonce}
 					/>
 					{/* Global Site Tag (gtag.js) - Google Analytics */}
-					{/* <script
+					<script
                         async
                         src={`https://www.googletagmanager.com/gtag/js?id=${GA_TRACKING_ID}`}
                     />
@@ -106,26 +106,7 @@ export default class AppDocument extends Document {
                             });
                         `
                         }}
-                    /> */}
-					{/* <link
-                        href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;700&family=Inter&display=swap"
-                        rel="stylesheet"
                     />
-                    <link
-                        rel="stylesheet"
-                        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-                    /> */}
-					{/* <link
-                        rel="stylesheet"
-                        type="text/css"
-                        charSet="UTF-8"
-                        href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css"
-                    />
-                    <link
-                        rel="stylesheet"
-                        type="text/css"
-                        href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css"
-                    /> */}
 				</Head>
 				<body>
 					<Main />

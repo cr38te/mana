@@ -1,4 +1,4 @@
-export const GA_TRACKING_ID = '';
+export const GA_TRACKING_ID = 'G-050ZP33BE2';
 export const GOOGLE_RECAPTCHA_CLIENT_CODE = '';
 export const GOOGLE_MAPS_API_KEY = '';
 
