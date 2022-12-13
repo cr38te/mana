@@ -34,9 +34,9 @@ const StyledColumn = styled(Column)<StyledColumnProps>`
 		max-width: 100%;
 	}
 
-	&.contentBox {
-		padding: 60px;
-	}
+    &.contentBox {
+        padding:60px;
+    }
 `;
 
 const StyledTitle = styled(Title)`
@@ -53,12 +53,12 @@ const StyledButton = styled(Button)`
 const List = styled.ul`
 	display: flex;
 	flex-direction: column;
-	justify-content: ${(p) => p.theme.justifyContent.start};
+    justify-content:${p=>p.theme.justifyContent.start};
 	width: 200px;
-	margin-bottom: 0px;
-	list-style-type: none;
-	margin: 0;
-	padding: 0;
+    margin-bottom:0px;
+    list-style-type:none;
+    margin:0;
+    padding:0;
 
 	@media ${device.tablet} {
 		width: 250px;
@@ -71,17 +71,14 @@ const List = styled.ul`
 `;
 
 const ListItem = styled.li`
-	display: flex;
-	flex-direction: row;
-	margin: 0 0 15px 0;
+    display:flex;
+    flex-direction:row;
+    margin:0 0 15px 0;
 `;
 
 const StyledDescription = styled(Description)`
-	@media ${device.mobileL} {
-		width: 100%;
-	}
 	> p {
-		margin: 0 0 15px 0;
+		margin:0 0 15px 0;
 	}
 `;
 
@@ -96,7 +93,7 @@ export default function Contact(props: any) {
 		props || {};
 
 	return (
-		<section>
+		<>
 			<Container
 				justifyContent="center"
 				direction="column"
@@ -112,98 +109,99 @@ export default function Contact(props: any) {
 						direction="column"
 						alignItems="start"
 						justifyContent="center"
-						className="contentBox"
+                        className="contentBox"
 					>
-						<StyledTitle
-							color="defaultSecondary"
-							title={title}
-							textAlign="left"
-							variant="H2"
-							className="asH2"
-						/>
-						<StyledDescription
-							color="primary"
-							textAlign="left"
-							description={description}
-							mb="30px"
-						/>
+                        <StyledTitle
+                            color="defaultSecondary"
+                            title={title}
+                            textAlign="left"
+                            variant="H2"
+                        />
+                        <StyledDescription
+                            color="primary"
+                            textAlign="left"
+                            description={description}
+                            mb="30px"
+                        />
 
-						<StyledTitle
-							color="defaultSecondary"
-							title={'Address'}
-							textAlign="left"
-							variant="H3"
-							className="asH2"
-						/>
-						<StyledDescription
-							color="primary"
-							textAlign="left"
-							description={contactColumns?.address}
-							mb="30px"
-							mt="0px"
-							className="description"
-						/>
+                        <StyledTitle
+                            color="defaultSecondary"
+                            title={'Address'}
+                            textAlign="left"
+                            variant="H3"
+                            className="asH2"
+                        />
+                        <StyledDescription
+                            color="primary"
+                            textAlign="left"
+                            description={contactColumns?.address}
+                            mb="30px"
+                            mt="0px"
+                            className="description"
+                        />
 
-						<StyledTitle
-							color="defaultSecondary"
-							title={'Opening Hours'}
-							textAlign="left"
-							variant="H3"
-							className="asH2"
-						/>
-						<Container
-							direction="column"
-							alignItems="start"
-							justifyContent="start"
-						>
-							<List>
-								{openingHours?.length > 0 &&
-									openingHours?.map(
-										(
-											{
-												date,
-												time,
-											}: { date: string; time: string },
-											i: number
-										) => {
-											return (
-												<ListItem key={'item' + i}>
-													<StyledDescription
-														color="primary"
-														textAlign="left"
-														mb="0"
-														mt="0"
-														description={date}
-													/>
-													<StyledDescription
-														color="primary"
-														textAlign="left"
-														mb="0"
-														mt="0"
-														description={time}
-													/>
-												</ListItem>
-											);
-										}
-									)}
-							</List>
-						</Container>
-						{showButton && (
-							<StyledButton
-								bgColor="defaultSecondary"
-								color="defaultPrimary"
-								href={(buttonLink && buttonLink?.slug) || ''}
-								title={buttonText}
-								className="button"
-								hoverColor="primary"
-								bgHoverColor="defaultSecondary"
-							>
-								{buttonText}
-							</StyledButton>
-						)}
+                        <StyledTitle
+                            color="defaultSecondary"
+                            title={'Opening Hours'}
+                            textAlign="left"
+                            variant="H3"
+                            className="asH2"
+                        />
+                        <Container
+                            direction="column"
+                            alignItems="start"
+                            justifyContent="start"
+                        >
+                            <List>
+                            {openingHours?.length > 0 &&
+                                openingHours?.map(
+                                    (
+                                        {
+                                            date,
+                                            time,
+                                        }: { date: string; time: string },
+                                        i: number
+                                    ) => {
+                                        return (
+                                            <ListItem key={'item' + i}>
+                                                <StyledDescription
+                                                    color="primary"
+                                                    textAlign="left"
+                                                    mb="0"
+                                                    mt="0"
+                                                    description={date}
+                                                />
+                                                <StyledDescription
+                                                    color="primary"
+                                                    textAlign="left"
+                                                    mb="0"
+                                                    mt="0"
+                                                    description={time}
+                                                />
+                                            </ListItem>
+                                        );
+                                    }
+                                )}
+                            </List>
+                        </Container>
+                        {showButton && (
+                            <StyledButton
+                                bgColor="defaultSecondary"
+                                color="defaultPrimary"
+                                href={
+                                    (buttonLink && buttonLink?.slug) || ''
+                                }
+                                title={buttonText}
+                                className="button"
+                                hoverColor="primary"
+                                bgHoverColor="defaultSecondary"
+                            >
+                                {buttonText}
+                            </StyledButton>
+                        )}
 					</StyledColumn>
 				</StyledRow>
 			</Container>
-		</section>
+		</>
 	);
 }

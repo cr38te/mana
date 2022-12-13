@@ -19,14 +19,8 @@ const StyledTitle = styled(Title)`
 
 const StyledColumn = styled(Column)`
     padding: 0 60px;
-	
     &.left {
-		margin-bottom:0;
         padding: 0;
-		@media ${device.mobileL}{
-		margin-bottom:30px;
-		
-	}
     }
 
     &.center-column {
@@ -49,7 +43,6 @@ export default function SponsorSection(props: {
 }) {
     const { buttonText, buttonLink, description, logo, title } = props || {};
     return (
-		<section>
         <StyledContainer
             justifyContent="center"
             alignItems="center"
@@ -77,8 +70,6 @@ export default function SponsorSection(props: {
                         color="defaultSecondary"
                         title={title}
                         textAlign="center"
-						variant='h1'
-						className="asH1"
                     />
                     <Description
                         color="primary"
@@ -105,6 +96,5 @@ export default function SponsorSection(props: {
                 </StyledColumn>
             </StyledRow>
         </StyledContainer>
-		</section>
     );
 }
