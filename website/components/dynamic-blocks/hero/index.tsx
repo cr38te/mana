@@ -56,7 +56,7 @@ export const HeroComponent = (heroArea: IHero) => {
             <>
                 <StyledContainer fullScreen={fullScreen} direction="column">
                     <ContainerBrand>
-                        <LogoImg src={Brand} alt="National Archaeological Museum Aruba" />
+                        <LogoImg src={Brand} alt="National Archaeological Museum Aruba" width="200" height="200" />
                     </ContainerBrand>
                     <HeroImage {...props} fullScreen={fullScreen} />
                 </StyledContainer>

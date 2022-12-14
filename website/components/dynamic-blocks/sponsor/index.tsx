@@ -74,7 +74,7 @@ export default function SponsorSection(props: {
                 direction="row"
             >
                 <StyledColumn width="20%" justifyContent="end" className="left">
-                    <NextImage src={logo.url} width="150px" height="150px" />
+                    <NextImage src={logo.url} width="150px" height="150px" alt="Mondriaan Fonds" />
                 </StyledColumn>
                 <StyledColumn
                     width="60%"
@@ -107,6 +107,7 @@ export default function SponsorSection(props: {
                         color="defaultPrimary"
                         colorHover="secondary"
                         target="_blank"
+                        title="Go to Mondriaan Fonds website"
                     >
                         {buttonText}
                     </StyledButton>

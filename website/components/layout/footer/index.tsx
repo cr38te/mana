@@ -92,7 +92,6 @@ export default function Aside({ newsletter, ...props }: IFooter) {
                 direction="column"
                 alignItems="center"
                 justifyContent="center"
-                role="content-info"
                 bgColor="defaultPrimary"
             >
                 <Row alignItems="center" justifyContent="center">

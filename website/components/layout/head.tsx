@@ -8,6 +8,8 @@ export default function Head({
     image = { url: '' },
 	permalink
 }: any) {
+
+    console.log(description);
     return (
         <NextHead>
             <title>{title || postTitle}</title>

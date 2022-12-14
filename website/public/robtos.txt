@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: http://manaruba.org/api//sitemap.txt
