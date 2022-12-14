@@ -229,6 +229,7 @@ export default function GoogleMaps(props: any) {
         disableDefaultUI: true,
         zoomControl: true,
 		zoom: parseFloat(zoom),
+        clickableIcons: false,
 	};
 
 	return (
