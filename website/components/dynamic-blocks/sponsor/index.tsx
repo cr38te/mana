@@ -7,7 +7,9 @@ import { Description } from '../../base/description';
 import Title from '../../base/heading';
 import { device } from '../../base/mediaquery';
 
-const StyledContainer = styled(Container)`
+const StyledContainer = styled(Container).attrs({
+    as: 'section'
+})`
     height: 100%;
 	//added opacity 25% smilar to design
 	background-color: ${(p) => p.theme.colors[p.bgColor!]}40;
@@ -15,6 +17,12 @@ const StyledContainer = styled(Container)`
 `;
 const StyledTitle = styled(Title)`
     width: 100%;
+
+    @media(max-width:800px) {
+        text-align:center !important;
+        margin-top:30px;
+        margin-bottom:15px;
+    }
 `;
 
 const StyledColumn = styled(Column)`
@@ -34,6 +42,14 @@ const StyledColumn = styled(Column)`
     }
 `;
 const StyledRow = styled(Row)``;
+
+const StyledButton = styled(Button)`
+    @media(max-width:800px) {
+        margin-top:30px;
+    }
+`;
+
+
 export default function SponsorSection(props: {
     buttonText: string;
     buttonLink: string;
@@ -69,11 +85,11 @@ export default function SponsorSection(props: {
                     <StyledTitle
                         color="defaultSecondary"
                         title={title}
-                        textAlign="center"
+                        textalign="center"
                     />
                     <Description
                         color="primary"
-                        textAlign="center"
+                        textalign="center"
                         description={description}
                         mb="0"
                     />
@@ -83,7 +99,7 @@ export default function SponsorSection(props: {
                     justifyContent="start"
                     className="right"
                 >
-                    <Button
+                    <StyledButton
                         href={buttonLink ? buttonLink : '#'}
                         bgColor="defaultSecondary"
                         bgColorHover="primary"
@@ -92,7 +108,7 @@ export default function SponsorSection(props: {
                         target="_blank"
                     >
                         {buttonText}
-                    </Button>
+                    </StyledButton>
                 </StyledColumn>
             </StyledRow>
         </StyledContainer>

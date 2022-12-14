@@ -73,6 +73,15 @@ const TextField = styled.input`
 		margin-bottom: ${(props) => props.theme.spacing.inset};
 		width: 100%;
 	}
+    
+    @media (max-width:800px) {
+        width: 100%;
+        margin-right:0;
+    }
+    @media (orientation: landscape) {
+        width: 100%;
+        margin-right:0;
+    }
 
 	&:focus {
 		outline: none;
@@ -91,9 +100,11 @@ const StyledButton = styled(Button).attrs({
 
 	@media ${device.mobileL} {
 		position: relative;
-		border-radius: 30px;
+		border-radius: 10px;
 		margin-top: 0px;
 		margin-left: 0;
+        margin-right:0px;
+        max-width: 100%;
 	}
 `;
 

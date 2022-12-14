@@ -36,6 +36,21 @@ const StyledColumn = styled(Column)<StyledColumnProps>`
 
     &.contentBox {
         padding:60px;
+
+        @media(max-width:800px) {
+            padding:15px;
+            align-items:flex-start;
+            justify-content:flex-start;
+            text-align:left;
+        }
+    }
+
+    @media (orientation: landscape) {
+        &.googleMaps {
+            margin:0;
+            width:100%;
+            max-width:100%
+        }
     }
 `;
 
@@ -74,6 +89,10 @@ const ListItem = styled.li`
     display:flex;
     flex-direction:row;
     margin:0 0 15px 0;
+
+    @media(max-width:800px) {
+        margin-bottom:0px;
+    }
 `;
 
 const StyledDescription = styled(Description)`
@@ -93,14 +112,13 @@ export default function Contact(props: any) {
 		props || {};
 
 	return (
-		<>
 			<Container
 				justifyContent="center"
 				direction="column"
 				alignItems="center"
 			>
 				<StyledRow direction="row">
-					<StyledColumn width="50%">
+					<StyledColumn width="50%" className="googleMaps">
 						<GoogleMaps {...map} {...contactColumns} />
 					</StyledColumn>
 					<StyledColumn
@@ -114,12 +132,13 @@ export default function Contact(props: any) {
                         <StyledTitle
                             color="defaultSecondary"
                             title={title}
-                            textAlign="left"
+                            textalign="left"
                             variant="H2"
+                            className="asH2"
                         />
                         <StyledDescription
                             color="primary"
-                            textAlign="left"
+                            textalign="left"
                             description={description}
                             mb="30px"
                         />
@@ -127,13 +146,13 @@ export default function Contact(props: any) {
                         <StyledTitle
                             color="defaultSecondary"
                             title={'Address'}
-                            textAlign="left"
+                            textalign="left"
                             variant="H3"
                             className="asH2"
                         />
                         <StyledDescription
                             color="primary"
-                            textAlign="left"
+                            textalign="left"
                             description={contactColumns?.address}
                             mb="30px"
                             mt="0px"
@@ -143,7 +162,7 @@ export default function Contact(props: any) {
                         <StyledTitle
                             color="defaultSecondary"
                             title={'Opening Hours'}
-                            textAlign="left"
+                            textalign="left"
                             variant="H3"
                             className="asH2"
                         />
@@ -166,14 +185,14 @@ export default function Contact(props: any) {
                                             <ListItem key={'item' + i}>
                                                 <StyledDescription
                                                     color="primary"
-                                                    textAlign="left"
+                                                    textalign="left"
                                                     mb="0"
                                                     mt="0"
                                                     description={date}
                                                 />
                                                 <StyledDescription
                                                     color="primary"
-                                                    textAlign="left"
+                                                    textalign="left"
                                                     mb="0"
                                                     mt="0"
                                                     description={time}
@@ -187,14 +206,14 @@ export default function Contact(props: any) {
                         {showButton && (
                             <StyledButton
                                 bgColor="defaultSecondary"
+                                bgColorHover="defaultSecondary"
+                                colorHover="primary"
                                 color="defaultPrimary"
+                                title={buttonText}
+                                className="button"
                                 href={
                                     (buttonLink && buttonLink?.slug) || ''
                                 }
-                                title={buttonText}
-                                className="button"
-                                hoverColor="primary"
-                                bgHoverColor="defaultSecondary"
                             >
                                 {buttonText}
                             </StyledButton>
@@ -202,6 +221,5 @@ export default function Contact(props: any) {
 					</StyledColumn>
 				</StyledRow>
 			</Container>
-		</>
 	);
 }

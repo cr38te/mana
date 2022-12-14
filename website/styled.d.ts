@@ -50,7 +50,7 @@ declare module 'styled-components' {
             [key?: string]: string;
         };
 
-        textAlign: {
+        textalign: {
             center: string;
             left: string;
             right: string;

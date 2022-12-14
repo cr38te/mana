@@ -22,6 +22,10 @@ const ContainerBrand = styled.div`
     left:50%;
     margin-left:-100px;
     z-index:20;
+
+    @media(max-width:800px) {
+        margin-left:-75px;
+    }
 `;
 
 const LogoImg = styled.img`
@@ -30,6 +34,10 @@ const LogoImg = styled.img`
     display: block;
     z-index: 10000;
     transition: 0.5s all ease;
+
+    @media(max-width:800px) {
+        width:150px;
+    }
 
     &.animateHeader {
         width: 100px;
@@ -41,7 +49,6 @@ const LogoImg = styled.img`
 `;
 
 export const HeroComponent = (heroArea: IHero) => {
-    console.log('heroArea', heroArea);
     const { classes, fullScreen, ...props } = heroArea || {};
 	
     return (

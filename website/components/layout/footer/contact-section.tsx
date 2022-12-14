@@ -17,11 +17,6 @@ const List = styled.ul`
 	list-style: none;
 	/* padding-right: ${(p) => p.theme.spacing.tripleInset}; */
 	width: 100%;
-	@media ${device.tablet} {
-		border-right: 0;
-		padding-right: 0;
-		border-bottom: 1px solid ${(p) => p.theme.colors.defaultSecondary};
-	}
 `;
 
 const ListItem = styled.li`
@@ -55,6 +50,12 @@ const ListItem = styled.li`
 	@media (max-width: 768px) {
 		justify-content: center;
 	}
+`;
+
+const ListItemSocial = styled.div`
+    @media(max-width:800px) {
+        margin:0 auto;
+    }
 `;
 
 const LinkItem = styled.a`
@@ -139,7 +140,6 @@ export default function ContactSection({
 	socials?: any;
 }) {
 	const { address, email, phone } = contactInfo || {};
-	console.log('socials', socials);
 
 	const Icons: any = {
 		facebook: FacebookSquaredIcon,
@@ -148,59 +148,51 @@ export default function ContactSection({
 	};
 
 	return (
-		<List>
-			{/* <ListItem>
-                <MapMarkerIcon iconColor="defaultSecondary" />
-                <ListAddressInfo>
-                    <Span
-                        dangerouslySetInnerHTML={{
-                            __html: address
-                        }}
-                    />
-                </ListAddressInfo>
-            </ListItem> */}
-			<ListItem>
-				<LinkItem href={`tel:${phone}`} title={`tel:${phone}`}>
-					<Telephone iconColor="defaultSecondary" />
-					<Span
-						dangerouslySetInnerHTML={{
-							__html: phone,
-						}}
-					/>
-				</LinkItem>
-			</ListItem>
-			<ListItem>
-				<LinkItem href={`mailto:${email}`} title={`${email}`}>
-					<Envelope iconColor="defaultSecondary" />
-					<Span
-						dangerouslySetInnerHTML={{
-							__html: email,
-						}}
-					/>
-				</LinkItem>{' '}
-			</ListItem>
-			<SocialsWrapper>
-				{socials?.length > 0 &&
-					socials?.map(({ type, link }: any, i: number) => {
-						const Icon = Icons[type]
-							? Icons[type]
-							: Icons['facebook'];
-						return (
-							<ListItem key={'social-' + i}>
-								<IconWrapper>
-									<NextLink
-										href={link}
-										title={'title'}
-										target="_blank"
-										rel="noopener"
-									>
-										<Icon iconColor="defaultSecondary" />
-									</NextLink>
-								</IconWrapper>
-							</ListItem>
-						);
-					})}
-			</SocialsWrapper>
-		</List>
+        <>
+            <List>
+                <ListItem>
+                    <LinkItem href={`tel:${phone}`} title={`tel:${phone}`}>
+                        <Telephone iconColor="defaultSecondary" />
+                        <Span
+                            dangerouslySetInnerHTML={{
+                                __html: phone,
+                            }}
+                        />
+                    </LinkItem>
+                </ListItem>
+                <ListItem>
+                    <LinkItem href={`mailto:${email}`} title={`${email}`}>
+                        <Envelope iconColor="defaultSecondary" />
+                        <Span
+                            dangerouslySetInnerHTML={{
+                                __html: email,
+                            }}
+                        />
+                    </LinkItem>{' '}
+                </ListItem>
+            </List>
+            <SocialsWrapper>
+                {socials?.length > 0 &&
+                    socials?.map(({ type, link }: any, i: number) => {
+                        const Icon = Icons[type]
+                            ? Icons[type]
+                            : Icons['facebook'];
+                        return (
+                            <ListItemSocial key={'social-' + i}>
+                                <IconWrapper>
+                                    <NextLink
+                                        href={link}
+                                        title={'title'}
+                                        target="_blank"
+                                        rel="noopener"
+                                    >
+                                        <Icon iconColor="defaultSecondary" />
+                                    </NextLink>
+                                </IconWrapper>
+                            </ListItemSocial>
+                        );
+                    })}
+            </SocialsWrapper>
+        </>
 	);
 }

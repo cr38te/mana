@@ -12,7 +12,7 @@ const List = styled.ul`
   min-width: 250px;
   width: 100%;
   max-width: 320px;
-  text-align: ${(p) => p.theme.textAlign.left};
+  text-align: ${(p) => p.theme.textalign.left};
   transition: ${(p) => p.theme.transition.fastLinear};
   z-index: 99999;
   opacity: 0;

@@ -17,7 +17,6 @@ export default function useSubmitContactFormData(
 	const [loading, setLoading] = useState(false);
 	const [error, setError] = useState(null);
 	const [newsletterState, setNewsletterState] = useState('initial');
-	console.log('hand', handle);
 	const submit = (data) => {
 		const gtagLabel = data?.subject;
 		gtagEvent({
@@ -34,7 +33,6 @@ export default function useSubmitContactFormData(
 			setError(`No handle function provided`);
 			throw 'No handle function provided';
 		}
-		console.log('data', data, loading, newsletterState, grecaptcha);
 		setLoading(true);
 		setNewsletterState('submitting');
 		grecaptcha.ready(async function () {

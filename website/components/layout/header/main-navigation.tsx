@@ -92,7 +92,7 @@ const MenuItem = styled.h1`
 
             font-weight: ${(props) => props.theme.fontWeight.bold};
             width: 100%;
-            text-align: ${(props) => props.theme.textAlign.center};
+            text-align: ${(props) => props.theme.textalign.center};
             display: flex;
             justify-content: center;
             align-items: center;

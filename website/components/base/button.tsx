@@ -18,7 +18,7 @@ export const Button = styled.a<ButtonProps>`
     width: 100%;
     max-width: 270px;
     font-weight: ${(props) => props.theme.fontWeight.regular};
-    text-align: ${(props) => props.theme.textAlign.center};
+    text-align: ${(props) => props.theme.textalign.center};
     text-decoration: none;
     padding: 15px 40px;
     transition: ${(props) => props.theme.transition.linear};

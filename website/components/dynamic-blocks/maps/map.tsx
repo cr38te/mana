@@ -196,6 +196,14 @@ const Map = styled.div`
 	@media ${device.desktopS} {
 		height: 100vh;
 	}
+
+    @media(max-width:800px) {
+        height:60vh;
+    }
+
+    @media (orientation: landscape) {
+        height:550px;
+    }
 `;
 
 const NEXT_PUBLIC_GOOGLE_MAPS_API_KEY =
@@ -211,7 +219,6 @@ export default function GoogleMaps(props: any) {
 		zoom: parseFloat(zoom),
 	};
 
-	console.log('defaultProps.', defaultProps.center);
 	return (
 		<Map>
 			<GoogleMapReact

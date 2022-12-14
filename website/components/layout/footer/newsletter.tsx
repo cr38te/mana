@@ -4,9 +4,16 @@ import NewsletterForm from './newsletter-form';
 import Title from '../../base/heading';
 import { INewsletter } from '../../../utils/interface';
 import { Row } from '../../base';
+
 const Container = styled.div`
     width: 100%;
     height: auto;
+`;
+
+const StyledTitle = styled(Title)`
+    @media(max-width:800px) {
+        text-align:center;
+    }
 `;
 
 
@@ -23,11 +30,11 @@ export default function Newsletter({
     return (
         <Container>
             {title && (
-                <Title
+                <StyledTitle
                     variant="h2"
                     color="defaultSecondary"
                     title={title}
-                    textTransform="none"
+                    texttransform="none"
                     className="asH2"
                 />
             )}

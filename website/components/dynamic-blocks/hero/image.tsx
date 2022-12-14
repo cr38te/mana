@@ -21,6 +21,11 @@ const StyledContainer = styled(Container)<ContainerProps>`
     background-attachment:fixed;
     position: relative;
     background-size:cover;
+
+    @media (orientation: landscape) {
+        align-items:flex-end;
+    }
+
     @media ${device.laptopL} {
         background-repeat: none;
         background-size: cover;
@@ -30,6 +35,9 @@ const StyledContainer = styled(Container)<ContainerProps>`
         background-repeat: none;
         background-size: cover;
         background-position: center;
+    }
+    @media(max-width:800px) {
+        background-attachment:scroll;
     }
     &:after {
         content: '';
@@ -56,7 +64,7 @@ const StyledRow = styled(Row)`
 
 type TextProps = {
     color?: keyof DefaultTheme['colors'];
-    textAlign?: keyof DefaultTheme['textAlign'];
+    textalign?: keyof DefaultTheme['textalign'];
 };
 
 const StyledColumn = styled(Column)`
@@ -119,7 +127,7 @@ export default function HeroImage({
                             color="defaultPrimary"
                             title={title}
                             mb="doubleInset"
-                            textTransform="none"
+                            texttransform="none"
                             className="asH1"
                         />
                     )}
@@ -128,7 +136,7 @@ export default function HeroImage({
                             className="description"
                             color="tertiary"
                             description={description}
-                            textAlign="start"
+                            textalign="start"
                             mb="15px"
                         />
                     )}
@@ -139,8 +147,8 @@ export default function HeroImage({
                             href={link}
                             title={linkText}
                             className="button-hero"
-                            hoverColor="primary"
-                            bgHoverColor="defaultSecondary"
+                            colorHover="primary"
+                            bgColorHover="defaultSecondary"
                         >
                             {linkText}
                         </Button>

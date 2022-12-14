@@ -8,7 +8,7 @@ export const H1 = styled.h1<HProps>`
     font-weight:${p=>p.theme.fontWeight.light};
     line-height:100%;
     color:${p=>p.theme.colors[p.color]};
-    text-align:${p=>p.theme.textAlign.left};
+    text-align:${p=>p.theme.textalign.left};
 `;
 
 export const H2 = styled(H1).attrs({
@@ -43,12 +43,12 @@ export const H6 = styled(H1).attrs({
 
 
 type ParagraphProps={
-	textAlign?:keyof DefaultTheme["textAlign"]
+	textalign?:keyof DefaultTheme["textalign"]
 }
 export const ParagraphCSS = css<ParagraphProps>`
     font-size:${p=>p.theme.fontSizes.extraSmall};
     line-height:21px;
-    text-align:${p=>p.theme.textAlign[p.textAlign!]};
+    text-align:${p=>p.theme.textalign[p.textalign!]};
     font-weight:${p=>p.theme.fontWeight.light};
     align-items:${p=>p.theme.alignItems.center};
 

@@ -5,8 +5,8 @@ import { H1 } from './typography';
 
 type StyleTitleProps = {
     mb: string;
-    textTransform: string;
-    textAlign: string;
+    texttransform: string;
+    textalign: string;
     fonts: string;
     as?: any;
 };
@@ -14,8 +14,8 @@ type StyleTitleProps = {
 const StyledTitle = styled(H1)<StyleTitleProps>`
     margin-bottom: ${(p) => p.theme.spacing[p.mb]};
     line-height: 38px;
-    text-transform: ${(p) => [p.textTransform]};
-    text-align: ${(p) => p.theme.textAlign[p.textAlign]};
+    text-transform: ${(p) => [p.texttransform]};
+    text-align: ${(p) => p.theme.textalign[p.textalign]};
     font-family: ${(p) => p.theme.fonts[p.fonts]};
 	font-weight: bold;
 
@@ -24,11 +24,16 @@ const StyledTitle = styled(H1)<StyleTitleProps>`
         line-height: 100%;
     }
     &.asH2 {
-        font-size: clamp(1rem, -0.875rem + 8.333333vw, 2rem);
+        font-size: clamp(1.5rem, -0.875rem + 8.333333vw, 2.5rem);
         line-height: 100%;
+
+        @media(max-width:800px) {
+            font-size:21px;
+            line-height:32px;
+        }
     }
     &.asH3 {
-        font-size: clamp(1rem, -0.875rem + 8.333333vw, 1.75em);
+        font-size: clamp(2rem, -0.875rem + 8.333333vw, 2.5rem);
         line-height: 100%;
     }
 
@@ -37,9 +42,9 @@ const StyledTitle = styled(H1)<StyleTitleProps>`
 		font-weight: 400;
     }
 
-	@media ${device.tablet} {
-		text-align: center;
-	}
+    @media(max-width:800px) {
+        text-align:left;
+    }
 `;
 
 // type TitleProps = {
@@ -47,9 +52,9 @@ const StyledTitle = styled(H1)<StyleTitleProps>`
 //     variant?: string|undefined;
 //     color?: string|undefined;
 //     mb?: string|undefined;
-//     textTransform?: string|undefined;
+//     texttransform?: string|undefined;
 //     className?: string|undefined;
-//     textAlign?: string|undefined;
+//     textalign?: string|undefined;
 //     fonts?: string|undefined;
 // };
 
@@ -58,9 +63,9 @@ export default function Title({
     variant,
     color,
     mb = 'doubleInset',
-    textTransform = 'none',
+    texttransform = 'none',
     className,
-    textAlign,
+    textalign,
     fonts
 }: any) {
     return (
@@ -69,9 +74,9 @@ export default function Title({
             mb={mb}
             as={variant}
             color={color}
-            textTransform={textTransform}
+            texttransform={texttransform}
             className={className}
-            textAlign={textAlign}
+            textalign={textalign}
         >
             {title}
         </StyledTitle>

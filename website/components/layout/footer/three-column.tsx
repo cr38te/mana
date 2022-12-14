@@ -25,15 +25,15 @@ const StyledColumn = styled(Column)`
         align-items: ${(p) => p.theme.alignItems.start};
     }
 
-    @media (max-width: 835px) and (min-width: 426px) {
-        width: calc(calc(100% / 2) - 30px);
-        max-width: calc(calc(100% / 2) - 30px);
+    @media (orientation: landscape) {
+        width: 100%;
+        max-width: 100%;
         align-items: ${(p) => p.theme.alignItems.center};
         justify-content: ${(p) => p.theme.justifyContent.center};
         margin-bottom: ${(p) => p.theme.spacing.doubleInset};
     }
 
-    @media ${device.mobileL} {
+    @media (max-width:800px) {
         width: calc(100% - 30px);
         max-width: calc(100% - 30px);
         align-items: ${(p) => p.theme.alignItems.center};

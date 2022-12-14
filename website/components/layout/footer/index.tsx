@@ -5,6 +5,7 @@ import { device } from '../../base/mediaquery';
 import { ParagraphCSS } from '../../base/typography';
 import ThreeColumn from './three-column';
 import { IFooter } from '../../../utils/interface';
+
 const StyledAside = styled(Container).attrs({
     as: 'aside'
 })`
@@ -20,6 +21,10 @@ const StyledFooter = styled(Container).attrs({
     height: 75px;
     @media ${device.laptop} {
         height: unset;
+    }
+    @media(max-width:800px) {
+        padding-top:15px;
+        padding-bottom:15px;
     }
 `;
 

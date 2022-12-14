@@ -6,7 +6,7 @@ import { ParagraphCSS } from './typography';
 
 type TextProps = {
     color: keyof DefaultTheme['colors'];
-    textAlign?: keyof DefaultTheme['textAlign'];
+    textalign?: keyof DefaultTheme['textalign'];
     width: string;
     mt?: string;
     mb?: string;
@@ -22,29 +22,25 @@ const Text = styled.div<TextProps>`
 	width: ${(p) => p.width};
 
     p {
-        text-align: ${(p) => p.theme.textAlign[p.textAlign!]};
+        text-align: ${(p) => p.theme.textalign[p.textalign!]};
 		margin-bottom: ${(p) => (p.mb ? p.mb : p.theme.spacing.tripleInset)};
         color: ${(p) => p.theme.colors[p.color]};
     }
-    
 
     @media ${device.laptop} {
-        font-size: 21px;
+        font-size: 16px;
         line-height: 24px;
         padding-left: 0;
         padding-right: 0;
-        margin-bottom: 60px;
+        margin-bottom: 15px;
         &.mobileDescription {
-            margin-bottom: 30px;
+            margin-bottom: 15px;
         }
     }
 
 	@media ${device.mobileL}{
-		font-size:18px;
-		line-height: 20px;
-		margin-bottom: 30px;
-		width: 90%;
-		
+		font-size: 16px;
+        line-height: 24px;
 	}
 `;
 
@@ -52,7 +48,7 @@ export const Description = ({
     description,
     color = 'quinary',
     width = '100%',
-    textAlign = 'center',
+    textalign = 'center',
     className,
     mt,
     mb
@@ -60,7 +56,7 @@ export const Description = ({
     description: string;
     color?: string;
     width?: string;
-    textAlign?: string;
+    textalign?: string;
     className?: string;
     mt?: string;
     mb?: string;
@@ -69,7 +65,7 @@ export const Description = ({
         <Text
             color={color}
             width={width}
-            textAlign={textAlign}
+            textalign={textalign}
             className={className}
             mt={mt}
             mb={mb}

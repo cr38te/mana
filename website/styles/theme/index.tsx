@@ -43,7 +43,7 @@ const Theme = ({ children }: ThemeProps) => {
             megaInset: '120px',
             none: '0px'
         },
-        textAlign: {
+        textalign: {
             center: 'center',
             left: 'left',
             right: 'right',

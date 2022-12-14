@@ -123,7 +123,7 @@ const StyledButton = styled(Button).attrs({
 })`
     width: 220px;
     border: 0;
-    text-transform: ${(p) => [p.textTransform]};
+    text-transform: ${(p) => [p.texttransform]};
 `;
 
 const MessageDone = styled.strong`
@@ -360,7 +360,7 @@ export default function Form({ ...props }) {
                                 type="submit"
                                 bgColor="primary"
                                 color="defaultPrimary"
-                                textTransform="uppercase"
+                                texttransform="uppercase"
                                 style={{
                                     display: `${
                                         response?.status === 'ok'
@@ -419,7 +419,7 @@ export default function Form({ ...props }) {
                                         ? 'defaultSecondary'
                                         : 'defaultPrimary'
                                 }
-                                textTransform="uppercase"
+                                texttransform="uppercase"
                                 style={{
                                     display: `${
                                         response?.status === 'ok'

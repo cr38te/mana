@@ -51,7 +51,7 @@ const ListItem = styled.li<ListItemProps>`
 
 type LinkItemProps = {
     color: keyof DefaultTheme['colors'];
-    textTransform: string;
+    texttransform: string;
 };
 
 const LinkItem = styled.a<LinkItemProps>`
@@ -61,7 +61,7 @@ const LinkItem = styled.a<LinkItemProps>`
     flex-direction: ${(p) => p.theme.direction.row};
     align-items: ${(p) => p.theme.alignItems.start};
     line-height: 21px;
-    text-transform: ${(p) => [p.textTransform]};
+    text-transform: ${(p) => [p.texttransform]};
 
     &:hover {
         text-decoration: underline;
@@ -77,12 +77,12 @@ export default function ListLink({ footerLinks }: any) {
         links,
         title,
 
-        textTransform = 'uppercase',
+        texttransform = 'uppercase',
         className
     } = footerLinks || {};
     return (
         <>
-            <Title title={title} color="tertiary" className="asH3" variant="h3" textTransform="uppercase"></Title>
+            <Title title={title} color="tertiary" className="asH3" variant="h3" texttransform="uppercase"></Title>
             <List>
                 {links?.length > 0 &&
                     links?.map((item: any, i: number) => (
@@ -94,7 +94,7 @@ export default function ListLink({ footerLinks }: any) {
                             <LinkItem
                                 href={`${item.link}`}
                                 color="tertiary"
-                                textTransform={textTransform}
+                                texttransform={texttransform}
                                 target="_blank"
                                 rel="noopener"
                             >
