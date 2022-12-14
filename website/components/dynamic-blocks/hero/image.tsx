@@ -22,10 +22,6 @@ const StyledContainer = styled(Container)<ContainerProps>`
     position: relative;
     background-size:cover;
 
-    @media (orientation: landscape) {
-        align-items:flex-end;
-    }
-
     @media ${device.laptopL} {
         background-repeat: none;
         background-size: cover;
