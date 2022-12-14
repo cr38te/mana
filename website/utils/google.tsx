@@ -47,7 +47,7 @@ export const gMapOptions = {
         {
             featureType: 'poi',
             elementType: 'labels.text.fill',
-            stylers: [{ color: '#93817c', visibility: 'off' }]
+            stylers: [{ color: '#93817c' }, { visibility: 'off' }]
         },
         {
             featureType: 'poi.park',
