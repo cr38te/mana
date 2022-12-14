@@ -1,6 +1,6 @@
 export const GA_TRACKING_ID = 'G-050ZP33BE2';
 export const GOOGLE_RECAPTCHA_CLIENT_CODE = '';
-export const GOOGLE_MAPS_API_KEY = '';
+export const GOOGLE_MAPS_API_KEY = 'AIzaSyBCm93ldhOR3-KzuzJqKSqYyFp0VgIrErE';
 
 declare const window: any;
 
