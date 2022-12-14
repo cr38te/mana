@@ -23,182 +23,134 @@ export const gtagEvent = ({ action, category, label, value }: any) => {
 export const gMapOptions = {
     styles: [
         {
-            "featureType": "water",
-            "elementType": "all",
-            "stylers": [
+            featureType: 'administrative',
+            elementType: 'all',
+            stylers: [
                 {
-                    "hue": "#7fc8ed"
+                    visibility: 'on'
                 },
                 {
-                    "saturation": 55
-                },
+                    lightness: 33
+                }
+            ]
+        },
+
+        {
+            featureType: 'poi.business',
+            elementType: 'all',
+            stylers: [
                 {
-                    "lightness": -6
-                },
-                {
-                    "visibility": "on"
+                    visibility: 'off'
                 }
             ]
         },
         {
-            "featureType": "water",
-            "elementType": "labels",
-            "stylers": [
+            featureType: 'poi',
+            elementType: 'labels.text.fill',
+            stylers: [{ color: '#93817c' }, { visibility: 'off' }]
+        },
+        {
+            featureType: 'poi.park',
+            elementType: 'geometry',
+            stylers: [
                 {
-                    "hue": "#7fc8ed"
-                },
-                {
-                    "saturation": 55
-                },
-                {
-                    "lightness": -6
-                },
-                {
-                    "visibility": "off"
+                    color: '#deecdb'
                 }
             ]
         },
         {
-            "featureType": "poi.park",
-            "elementType": "geometry",
-            "stylers": [
+            featureType: 'poi.park',
+            elementType: 'labels',
+            stylers: [
                 {
-                    "hue": "#83cead"
+                    visibility: 'off'
                 },
                 {
-                    "saturation": 1
-                },
-                {
-                    "lightness": -15
-                },
-                {
-                    "visibility": "on"
+                    lightness: '25'
                 }
             ]
         },
         {
-            "featureType": "landscape",
-            "elementType": "geometry",
-            "stylers": [
+            featureType: 'road',
+            elementType: 'all',
+            stylers: [
                 {
-                    "hue": "#f3f4f4"
-                },
-                {
-                    "saturation": -84
-                },
-                {
-                    "lightness": 59
-                },
-                {
-                    "visibility": "on"
+                    lightness: '25'
                 }
             ]
         },
         {
-            "featureType": "landscape",
-            "elementType": "labels",
-            "stylers": [
+            featureType: 'road',
+            elementType: 'labels.icon',
+            stylers: [
                 {
-                    "hue": "#ffffff"
-                },
-                {
-                    "saturation": -100
-                },
-                {
-                    "lightness": 100
-                },
-                {
-                    "visibility": "off"
+                    visibility: 'off'
                 }
             ]
         },
         {
-            "featureType": "road",
-            "elementType": "geometry",
-            "stylers": [
+            featureType: 'road.highway',
+            elementType: 'geometry',
+            stylers: [
                 {
-                    "hue": "#ffffff"
-                },
-                {
-                    "saturation": -100
-                },
-                {
-                    "lightness": 100
-                },
-                {
-                    "visibility": "on"
+                    color: '#ffffff'
                 }
             ]
         },
         {
-            "featureType": "road",
-            "elementType": "labels",
-            "stylers": [
+            featureType: 'road.highway',
+            elementType: 'labels',
+            stylers: [
                 {
-                    "hue": "#bbbbbb"
+                    saturation: '-90'
                 },
                 {
-                    "saturation": -100
-                },
-                {
-                    "lightness": 26
-                },
-                {
-                    "visibility": "on"
+                    lightness: '25'
                 }
             ]
         },
         {
-            "featureType": "road.arterial",
-            "elementType": "geometry",
-            "stylers": [
+            featureType: 'road.arterial',
+            elementType: 'all',
+            stylers: [
                 {
-                    "hue": "#ffcc00"
-                },
-                {
-                    "saturation": 100
-                },
-                {
-                    "lightness": -35
-                },
-                {
-                    "visibility": "simplified"
+                    visibility: 'on'
                 }
             ]
         },
         {
-            "featureType": "road.highway",
-            "elementType": "geometry",
-            "stylers": [
+            featureType: 'road.arterial',
+            elementType: 'geometry',
+            stylers: [
                 {
-                    "hue": "#ffcc00"
-                },
-                {
-                    "saturation": 100
-                },
-                {
-                    "lightness": -22
-                },
-                {
-                    "visibility": "on"
+                    color: '#ffffff'
                 }
             ]
         },
         {
-            "featureType": "poi.school",
-            "elementType": "all",
-            "stylers": [
+            featureType: 'road.local',
+            elementType: 'geometry',
+            stylers: [
                 {
-                    "hue": "#d7e4e4"
-                },
+                    color: '#ffffff'
+                }
+            ]
+        },
+        {
+            featureType: 'transit.line',
+            elementType: 'all',
+            stylers: [
                 {
-                    "saturation": -60
-                },
+                    visibility: 'off'
+                }
+            ]
+        },
+        {
+            featureType: 'transit.station',
+            elementType: 'all',
+            stylers: [
                 {
-                    "lightness": 23
-                },
-                {
-                    "visibility": "on"
+                    visibility: 'off'
                 }
             ]
         }
