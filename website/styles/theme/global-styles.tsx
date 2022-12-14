@@ -2,17 +2,16 @@ import { createGlobalStyle } from 'styled-components'
 
 export default createGlobalStyle`
 
-
 @font-face {
 	font-family: "Nilland-Black";
 	src: url(${`/fonts/Nilland-Black.ttf`}) format('truetype');
-	font-display: fallback;
+	font-display: swap;
 }
 
 @font-face {
 	font-family: "Futura-Book-Regular";
 	src: url(${`/fonts/Futura-Book-Regular.otf`}) format('opentype');
-	font-display: fallback;
+    font-display: swap;
 }
 
     *,
