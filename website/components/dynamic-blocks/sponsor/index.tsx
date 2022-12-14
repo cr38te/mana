@@ -59,7 +59,6 @@ export default function SponsorSection(props: {
 }) {
     const { buttonText, buttonLink, description, logo, title } = props || {};
 
-    console.log(logo);
     return (
         <StyledContainer
             justifyContent="center"
