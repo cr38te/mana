@@ -30,14 +30,17 @@ const StyledContainer = styled(Container)<ContainerProps>`
         background-repeat: none;
         background-size: cover;
         background-position: center;
+        align-items:center;
     }
     @media ${device.tablet} {
         background-repeat: none;
         background-size: cover;
         background-position: center;
+        align-items:flex-end;
     }
     @media(max-width:800px) {
         background-attachment:scroll;
+        align-items:flex-end;
     }
     &:after {
         content: '';

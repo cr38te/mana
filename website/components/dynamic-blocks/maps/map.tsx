@@ -193,15 +193,16 @@ const Map = styled.div`
 	.mapMarker {
 		width: 30px;
 	}
+
 	@media ${device.desktopS} {
-		height: 100vh;
+		height: 950px;
 	}
 
-    @media(max-width:800px) {
-        height:60vh;
+    @media(max-width:1080px) {
+        height:1100px;
     }
 
-    @media (orientation: landscape) {
+    @media (max-width:800px) {
         height:550px;
     }
 `;

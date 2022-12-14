@@ -45,11 +45,12 @@ const StyledColumn = styled(Column)<StyledColumnProps>`
         }
     }
 
-    @media (orientation: landscape) {
+    @media(max-width:1024px) {
+        width:100%;
+        max-width:100%;
+
         &.googleMaps {
             margin:0;
-            width:100%;
-            max-width:100%
         }
     }
 `;
