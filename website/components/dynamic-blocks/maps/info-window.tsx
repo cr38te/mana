@@ -27,13 +27,13 @@ const CloseContainer = styled.div`
 const InfoWindowContainer = styled.div`
     z-index: 1;
     background-color: ${(p) => p.theme.colors.tertiary};
-    border: 1px solid ${(p) => p.theme.colors.defaultSecondary};
+    border: 1px solid rgba(0,0,0,0.30);
     padding: ${(p) => p.theme.spacing.inset};
     position: absolute;
     bottom: calc(100% + 25px);
     left: -150px;
     min-width: 325px;
-    border-radius: 10px;
+    border-radius: 0;
     display: none;
     @media ${device.tablet} {
         left: -25px;
@@ -51,8 +51,7 @@ const InfoWindowContainer = styled.div`
         content: '';
         border-style: solid;
         transform: rotate(0);
-        border-width: 11px 11px 0;
-        border-color: ${(p) => p.theme.colors.primary} transparent transparent;
+        border:0;
         position: absolute;
         bottom: -12px;
         left: 143px;
@@ -145,8 +144,8 @@ export const InfoWindow = ({
             </CloseContainer>
             <StyledTitle
                 variant="h3"
-                color="defaultPrimary"
-                title={'Find us here!'}
+                color="defaultSecondary"
+                title={'Visit Us!'}
                 mb="inset"
             />
 

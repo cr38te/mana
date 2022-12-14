@@ -217,6 +217,17 @@ export default function GoogleMaps(props: any) {
 			lat: parseFloat(lat),
 			lng: parseFloat(lng),
 		},
+        backgroundColor: '#dddddd',
+        disableDoubleClickZoom: false,
+        keyboardShortcuts: false,
+        scrollwheel: false,
+        draggable: true,
+        panControl: true,
+        arrowPosition: 30,
+        arrowStyle: 2,
+        arrowSize: 15,
+        disableDefaultUI: true,
+        zoomControl: true,
 		zoom: parseFloat(zoom),
 	};
 
