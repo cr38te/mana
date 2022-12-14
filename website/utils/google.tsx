@@ -40,14 +40,14 @@ export const gMapOptions = {
             elementType: 'all',
             stylers: [
                 {
-                    visibility: 'on'
+                    visibility: 'off'
                 }
             ]
         },
         {
             featureType: 'poi',
             elementType: 'labels.text.fill',
-            stylers: [{ color: '#93817c' }]
+            stylers: [{ color: '#93817c', visibility: 'off' }]
         },
         {
             featureType: 'poi.park',
@@ -63,7 +63,7 @@ export const gMapOptions = {
             elementType: 'labels',
             stylers: [
                 {
-                    visibility: 'on'
+                    visibility: 'off'
                 },
                 {
                     lightness: '25'
