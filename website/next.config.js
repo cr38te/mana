@@ -28,7 +28,7 @@ const securityHeaders = [
 module.exports = withPlugins([withVideos, withImages], {
     images: {
         disableStaticImages: true,
-        domains: ['via.placeholder.com', 'cms.mana.cr38te.dev']
+        domains: ['via.placeholder.com', 'cms.manaruba.org']
     },
     async headers() {
         return [
