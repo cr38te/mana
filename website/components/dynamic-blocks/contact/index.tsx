@@ -70,7 +70,7 @@ const List = styled.ul`
 	display: flex;
 	flex-direction: column;
     justify-content:${p=>p.theme.justifyContent.start};
-	width: 200px;
+	width: 100%;
     margin-bottom:0px;
     list-style-type:none;
     margin:0;
@@ -100,6 +100,9 @@ const StyledDescription = styled(Description)`
 	> p {
 		margin:0 0 15px 0;
 	}
+    &.first-child {
+        width:100%;
+    }
 `;
 
 export default function Contact(props: any) {
@@ -190,13 +193,7 @@ export default function Contact(props: any) {
                                                     mb="0"
                                                     mt="0"
                                                     description={date}
-                                                />
-                                                <StyledDescription
-                                                    color="primary"
-                                                    textalign="left"
-                                                    mb="0"
-                                                    mt="0"
-                                                    description={time}
+                                                    className="first-child"
                                                 />
                                             </ListItem>
                                         );

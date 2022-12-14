@@ -21,12 +21,13 @@ const StyledContainer = styled(Container)<ContainerProps>`
     background-attachment:fixed;
     position: relative;
     background-size:cover;
+    align-items:flex-end;
 
     @media ${device.laptopL} {
         background-repeat: none;
         background-size: cover;
         background-position: center;
-        align-items:center;
+        align-items:flex-end;
     }
     @media ${device.tablet} {
         background-repeat: none;
@@ -79,9 +80,11 @@ const StyledColumn = styled(Column)`
 `;
 const StyledTitle = styled(Title)`
     text-align: center;
+    margin-bottom:250px;
 
     @media ${device.mobileL} {
         text-align: center;
+        margin-bottom:15px;
     }
 `;
 
